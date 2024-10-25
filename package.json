@@ -2,10 +2,18 @@
 	"name": "@majksa-openapi/source",
 	"version": "0.0.0",
 	"license": "MIT",
-	"scripts": {},
+	"scripts": {
+		"build": "nx run-many --target=build --all",
+		"test": "nx run-many --target=test --all",
+		"types": "typecheck",
+		"lint": "biome check .",
+		"format": "biome check --write ."
+	},
 	"private": true,
-	"dependencies": {},
 	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@gitopslovers/nx-biome": "1.5.0",
+		"@nrwl/nx-cloud": "19.1.0",
 		"@nx/js": "20.0.5",
 		"@swc-node/register": "1.10.9",
 		"@swc/core": "1.7.39",
